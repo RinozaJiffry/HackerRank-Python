@@ -10,10 +10,10 @@ import sys
 
 if __name__ == '__main__':
     n = int(raw_input().strip())
-    if(n%2 == 0):
-        if(2<=n and n>=5 or n>20):
-            print("Not Weird")
-        if(6<=n and n<=20 ):
-            print("Weird")
-    if(n%2 !=0):
-        print("Weird")
+    answer = {True: "Not Weird", False: "Weird"}
+
+    print(answer[
+        n%2==0 and (
+            n in range(2,6) or 
+            n > 20)
+    ])
